@@ -1,6 +1,7 @@
-package Assignment1;
+package Assignment1.ques1;
 
-public class Service {
+public class HexaCalcService {
+    //Converts hexadecimal number to decimal number
      public int hexaToDeci(String num)
      {
         int len = num.length();
@@ -8,7 +9,7 @@ public class Service {
         int base = 1;
         for(int i = len-1; i>=0; i--)
         {
-             if(num.charAt(i) >= 'A' && num.charAt(i) <='F')
+             if(num.charAt(i) >= 'A' && num.charAt(i) <='F') 
              {
                 ans += (num.charAt(i) - 'A' + 10)*base;
              }
@@ -20,31 +21,28 @@ public class Service {
         }
         return ans;
      }
-     
+     //converts decimal to hexadecimal
      public String decToHexa(int num)
      {
-        String temp_ans = "";
+        String ans = "";
         while(num != 0)
         {
             int temp = num%16;
             if(temp > 9)
             {
-                temp_ans += (char)(temp + 'A' - 10);
+                ans = (char)(temp + 'A' - 10) + ans;
             }
             else
             {
-                temp_ans += (char)(temp + '0');
+                ans = (char)(temp + '0') + ans;
             }
             num = num/16;
-        }
-          String ans = "";
-          for(int i = temp_ans.length()-1; i>=0; i--)
-          {
-            ans += temp_ans.charAt(i);
-          }
+         }
+  
      return ans;
      }
 
+      // method to add two hexadecimal numbers
       public String add(String x, String y)
       {
              int num1 = hexaToDeci(x);
@@ -54,6 +52,8 @@ public class Service {
 
              return decToHexa(ans);
       }
+
+      // method to subtract two hexadecimal numbers
       public String subtract(String x, String y)
       {
              int num1 = hexaToDeci(x);
@@ -70,6 +70,8 @@ public class Service {
              }
                 return decToHexa(ans);
        }
+
+       // method to add two multiply numbers
       public String multiply(String x, String y)
       {
         int num1 = hexaToDeci(x);
@@ -78,8 +80,14 @@ public class Service {
         int ans = num1 * num2;
            return decToHexa(ans);
       }
+
+      // method to divite two hexadecimal numbers
         public String divide(String x, String y)
       {
+         if(y == "0")
+         {
+            return "Not Defined";
+         }
         int num1 = hexaToDeci(x);
         int num2 = hexaToDeci(y);
 
@@ -91,6 +99,8 @@ public class Service {
            return decToHexa(ans);
       }
 
+       
+      // method to check if the compariosion is done correctly or not
       public boolean comparator(String x, String y, String compariosion)
       {
           int len1 = x.length();
@@ -118,7 +128,7 @@ public class Service {
                    break;
                 }
                 else if((compariosion == "<") && (x.charAt(i) < y.charAt(i)))
-                flag = true;
+                   flag = true;
                 else if((compariosion == "<") && (x.charAt(i) > y.charAt(i))){
                     flag = false;
                     break;
