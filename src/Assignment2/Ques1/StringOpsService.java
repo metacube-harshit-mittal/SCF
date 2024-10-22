@@ -84,25 +84,25 @@ public class StringOpsService {
        */
       public String largestWord(String s)
       {
-        int current_count = 0;
-        int max_count = 0;
+        int currentCount = 0;
+        int maxCount = 0;
         
-        String current_ans = "";
+        String currentAns = "";
         String ans = "";
 
         for(int i=0; i<s.length(); i++)
         {
             if(s.charAt(i) == ' '){
-                current_count = 0;
-                current_ans = "";
+                currentCount = 0;
+                currentAns = "";
             }
             else{
-                current_count++;
-                current_ans = current_ans + s.charAt(i);
-                if(current_count >= max_count)
+                currentCount++;
+                currentAns = currentAns + s.charAt(i);
+                if(currentCount >= maxCount)
                 {
-                    max_count = current_count;
-                    ans = current_ans;
+                    maxCount = currentCount;
+                    ans = currentAns;
                 }
             }
         }
