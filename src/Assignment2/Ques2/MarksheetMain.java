@@ -26,7 +26,7 @@ public class MarksheetMain {
         Integer marks = sc.nextInt();
         if(marks < 0 || marks > 100)
         {
-
+             throw new ArithmeticException("The marks should be between 0 to 100");
         }
         marksheet.add(marks);
     }
@@ -34,7 +34,7 @@ public class MarksheetMain {
     MarksheetService marksheetService = new MarksheetService();
     System.out.println("Average grade of class is " + String.format("%.2f", marksheetService.avgGrade(marksheet, n)));
     System.out.println("Maximum grade in class is " + marksheetService.maxGrade(marksheet));
-    System.out.println("Maximum grade in class is " + marksheetService.minGrade(marksheet));
+    System.out.println("Minimum grade in class is " + marksheetService.minGrade(marksheet));
     System.out.println("Total percentage of passed student is " 
     + String.format("%.2f", marksheetService.passedStudents(marksheet,n)));
 }
