@@ -7,7 +7,7 @@ public class Square extends Shape {
       this.side = side;
     }
      /**
-       * calculates the area of Square
+       * Calculates the area of Square
        * @return area of square
        */   
      public double area()

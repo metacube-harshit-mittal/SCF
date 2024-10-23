@@ -7,12 +7,12 @@ public class Circle extends Shape {
         this.radius = radius;
       }
             /**
-       * calculates the area of circle
+       * Calculates the area of circle
        * @return area of circle
        */
        public double area()
        {
          double result = 3.14*radius*radius ;
-         return(result);
+         return result;
        }
 }

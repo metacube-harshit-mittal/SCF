@@ -9,12 +9,12 @@ public class Triangle extends Shape{
         this.height = height;
       }
       /**
-       * calculates the area of triangle
+       * Calculates the area of triangle
        * @return area of triangle
        */
        public double area()
        {
          double result = 0.5*width*height ;
-         return(result);
+         return result;
        }
       }

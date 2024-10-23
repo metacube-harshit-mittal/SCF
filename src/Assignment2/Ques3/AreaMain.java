@@ -37,8 +37,11 @@ public class AreaMain {
             Circle circle = new Circle(radius);
             System.out.println("Area of Circle is " + circle.area());
            }
-          
     }
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 2684ec054625d3c9377cf3ebe92abe5f064b7f8b
 }
 
 

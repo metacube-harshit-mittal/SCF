@@ -5,25 +5,25 @@ import java.util.ArrayList;
 public class MarksheetService {
 
     /**
-     * method to find out the average grade of all students
+     * Method to find out the average grade of all students
      * @param marksheet has the markes of students
-     * @param no_of_students no of students in the marksheet
+     * @param noOfStudents no of students in the marksheet
      * @return the averge grade of students
      */
-    public float avgGrade(ArrayList<Integer> marksheet, int no_of_students){
-        float total_marks = 0.00f;
-        for(int i=0; i<no_of_students; i++)
+    public float avgGrade(ArrayList<Integer> marksheet, int noOfStudents){
+        float totalMarks = 0.00f;
+        for(int i=0; i<noOfStudents; i++)
         {
-            total_marks += marksheet.get(i);
+            totalMarks += marksheet.get(i);
         }
-        float avg_grade = 0.00f;
-        avg_grade = total_marks/no_of_students;
+        float avgGrade = 0.00f;
+        avgGrade = totalMarks/noOfStudents;
                    
-        return avg_grade;
+        return avgGrade;
     }
 
     /**
-     * method to find out the maximum grade out of all students
+     * Method to find out the maximum grade out of all students
      * @param marksheet has the markes of students
      * @return the maximum grade from all students
      */
@@ -43,7 +43,7 @@ public class MarksheetService {
     }
     
     /**
-     * method to find out the minimum grade out of all students
+     * Method to find out the minimum grade out of all students
      * @param marksheet has the markes of students
      * @return the minimum grade from all students
      */
@@ -62,14 +62,14 @@ public class MarksheetService {
     }
    
     /**
-     * method to find out the percentage of passed
+     * Method to find out the percentage of passed
      * @param marksheet has the markes of students
-     * @param no_of_students no of students in the marksheet
+     * @param noOfStudents no of students in the marksheet
      * @return the percentage of passed students
      */
-    public float passedStudents(ArrayList<Integer> marksheet,int no_of_students){
+    public float passedStudents(ArrayList<Integer> marksheet,int noOfStudents){
         int count = 0;
-        for(int i=0; i<no_of_students; i++)
+        for(int i=0; i<noOfStudents; i++)
         {
             if(marksheet.get(i) >= 40){
                 count++;
@@ -77,7 +77,7 @@ public class MarksheetService {
         }
         float ans = 0.00f;
         try{
-         ans = ((float)(count)/(float)(no_of_students))*100.00f;
+         ans = ((float)(count)/(float)(noOfStudents))*100.00f;
         }
         catch(ArithmeticException e)
         {

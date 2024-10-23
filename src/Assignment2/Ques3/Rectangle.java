@@ -9,12 +9,12 @@ public class Rectangle extends Shape {
         this.height = height;
       }
        /**
-       * calculates the area of rectangle
+       * Calculates the area of rectangle
        * @return area of rectangle
        */
        public double area()
        {
          double result = width*height;
-         return(result);
+         return result;
        }
 }
