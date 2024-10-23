@@ -14,9 +14,9 @@ public class StringOpsMain {
 
        StringOpsService stringOpsService = new StringOpsService();
        
-       System.out.println(stringOpsService.isEqual(s1, s2));
-       System.out.println(stringOpsService.reverse(s2));
-       System.out.println(stringOpsService.changeString(s1));
-       System.out.println(stringOpsService.largestWord(s1));
+       System.out.println("0 for not equal and 1 for equal: " + stringOpsService.isEqual(s1, s2));
+       System.out.println("Reverse of the string is: " + stringOpsService.reverse(s2));
+       System.out.println("String after changing the cases: " + stringOpsService.changeString(s1));
+       System.out.println("The largest word in the string is: " + stringOpsService.largestWord(s1));
    }
 }

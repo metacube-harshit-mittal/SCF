@@ -12,13 +12,13 @@ public class StringOpsService {
         int len1 = s1.length();
         int len2 = s2.length();
         
-        //if length of both strings is not equal, they can't be equal
+        // If length of both strings is not equal, they can't be equal
         if(len1 != len2)
         {
             return 0;
         }
 
-        //if length is same then comparing the strings at each index. 
+        // If length is same then comparing the strings at each index. 
 
         boolean flag = true; //keep track if the characters are same or not
 
@@ -78,7 +78,7 @@ public class StringOpsService {
       }
 
       /**
-       * finding the largest word of a string
+       * Finding the largest word of a string
        * @param s is the string from which the largest word has to be found
        * @return largest word from the string
        */

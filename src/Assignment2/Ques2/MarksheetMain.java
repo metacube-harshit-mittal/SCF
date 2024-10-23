@@ -1,7 +1,6 @@
 package Assignment2.Ques2;
 
 import java.util.ArrayList;
-//import java.util.HashMap;
 import java.util.Scanner;
 
 public class MarksheetMain {
@@ -17,7 +16,7 @@ public class MarksheetMain {
         throw new ArithmeticException("Number of students students should be greater than 0");
     }
 
-    //HashMap<String, Integer> marksheet = new HashMap<String,Integer>();
+    // HashMap<String, Integer> marksheet = new HashMap<String,Integer>();
     ArrayList<Integer> marksheet = new ArrayList<Integer>();
     for(int i=0; i<n; i++)
     {
