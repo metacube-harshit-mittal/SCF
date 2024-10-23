@@ -9,15 +9,15 @@ public class JobSchedulerService {
        public ArrayList<Integer> completionTime(int [][] process)
         {
            ct.add(process[0][1]);
-           int current_ct = process[0][1];
+           int currentCt = process[0][1];
            for(int i=1; i<process.length; i++)
            {
-               if(current_ct > process[i][0])
-               current_ct += process[i][1];
+               if(currentCt > process[i][0])
+               currentCt += process[i][1];
                else
-               current_ct = process[i][0] + process[i][1];
+               currentCt = process[i][0] + process[i][1];
 
-               ct.add(current_ct);
+               ct.add(currentCt);
            }
            return ct;
         }
